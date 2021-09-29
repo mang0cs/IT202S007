@@ -19,8 +19,41 @@
         }
     </script>
     <style>
-        /* TODO: make edits here */
+        nav {
+            background-color: purple;
+        }
+        a {
+            background-color: purple;
+            text-transform: capitalize;
+        }
+        li:before{
+            content: "✓";
+        }
+        h1,
+        a{
+            color: pink;
+            font-size: 15px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        a:hover{
+            background-color: blue;
+        }
+        ul {
+            display: flex;
+            list-style: none;
+        }
+        }
     </style>
+    <nav>
+        <ul>
+            <li><a href="#" onclick = "updateCurrentPage('login')">login</a></li>
+            <li><a href="#" onclick = "updateCurrentPage('register')">register</a></li>
+            <li><a href="#" onclick = "updateCurrentPage('profile')">profile</a></li>
+            <li><a href="#" onclick = "updateCurrentPage('logout')">logout</a></li>
+        </ul>
+    </nav>
+
     <!-- make the necessary edits above this line -->
 
 
