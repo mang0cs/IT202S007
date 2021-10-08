@@ -8,7 +8,7 @@ require(__DIR__ . "/../../partials/nav.php");
     </div>
     <div>
         <label for="username">Username</label>
-        <input type ="text" name = "username" required maxlength = "30" />
+        <input type="text" name="username" required maxlength="30" />
     </div>
     <div>
         <label for="pw">Password</label>
@@ -38,33 +38,44 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
     //TODO 3
 
 
-    $errors = [];
+    //$errors = [];
+    $hasError = false;
     if (empty($email)) {
         flash("Email must not be empty");
+        $hasError = true;
     }
+    //$email = filter_var($email, FILTER_SANITIZE_EMAIL);
     $email = sanitize_email($email);
+    //validate
+    //if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     if (!is_valid_email($email)) {
-        flash("Email is invalid");
+        flash("Invalid email");
+        $hasError = true;
+    }
+    if (!preg_match('/^[a-z0-9_-]{3,16}$/', $username)) {
+        flash("Username must only be alphanumeric and can only contain - or _");
+        $hasError = true;
     }
     if (empty($password)) {
-        flash("Password must not be empty");
+        flash("password must not be empty");
+        $hasError = true;
     }
     if (empty($confirm)) {
-        flash("Confirm Password must not be empty");
+        flash("Confirm password must not be empty");
+        $hasError = true;
     }
     if (strlen($password) < 8) {
         flash("Password too short");
-    }
-    if(!preg_match('/[^a-z_\-0-9]/i', $username)){
-        flash("Username can only contain alphanumeric characters and _ or -");
+        $hasError = true;
     }
     if (strlen($password) > 0 && $password !== $confirm) {
         flash("Passwords must match");
+        $hasError = true;
     }
-    if (count($errors) > 0) {
-        flash("<pre>" . var_export($errors, true) . "</pre>");
+    if ($hasError) {
+        //flash("<pre>" . var_export($errors, true) . "</pre>");
     } else {
-        flash("Welcome, $email");
+        flash("Welcome, $email"); //will show on home.php
         $hash = password_hash($password, PASSWORD_BCRYPT);
         $db = getDB();
         $stmt = $db->prepare("INSERT INTO Users (email, password, username) VALUES(:email, :password, :username)");
@@ -77,5 +88,7 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         }
     }
 }
-require(__DIR__. "/../../partials/flash.php");
+?>
+<?php
+require(__DIR__ . "/../../partials/flash.php");
 ?>
