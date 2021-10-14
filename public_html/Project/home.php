@@ -5,9 +5,13 @@ require(__DIR__."/../../partials/nav.php");
 <?php
 if(is_logged_in())
 {
-  echo "Welcome, " . get_user_email();
+  echo "Welcome, " . get_username();
 }
-else{
-  echo "You're not logged in";
+function is_logged_in($redirect = false, $destination = "login.php")
+{
+    if ($redirect) {
+        die(header("Location: $destination"));
+    }
+    return isset($_SESSION["user"]); //se($_SESSION, "user", false, false);
 }
 ?>
