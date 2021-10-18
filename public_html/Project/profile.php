@@ -51,7 +51,7 @@ if (isset($_POST["save"])) {
     $current_password = se($_POST, "currentPassword", null, false);
     $new_password = se($_POST, "newPassword", null, false);
     $confirm_password = se($_POST, "confirmPassword", null, false);
-    if (isset($current_password) && isset($new_password) && isset($confirm_password)) {
+    if (!empty($current_password) && !empty($new_password) && !empty($confirm_password)) {
         if ($new_password === $confirm_password) {
             //TODO validate current
             $stmt = $db->prepare("SELECT password from Users where id = :id");
@@ -123,7 +123,7 @@ $username = get_username();
         //find the flash container, create a new element, appendChild
         if (pw !== con) {
             //find the container
-            let flash = document.getElementById("flash");
+            /*let flash = document.getElementById("flash");
             //create a div (or whatever wrapper we want)
             let outerDiv = document.createElement("div");
             outerDiv.className = "row justify-content-center";
@@ -136,7 +136,8 @@ $username = get_username();
 
             outerDiv.appendChild(innerDiv);
             //add the element to the DOM (if we don't it merely exists in memory)
-            flash.appendChild(outerDiv);
+            flash.appendChild(outerDiv);*/
+            flash("Password and Confirm password must match", "warning");
             isValid = false;
         }
         return isValid;
