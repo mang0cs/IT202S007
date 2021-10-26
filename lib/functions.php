@@ -38,10 +38,12 @@ function is_valid_email($email = "")
 //TODO 3: User Helpers
 function is_logged_in($redirect = false, $destination = "login.php")
 {
-    if ($redirect) {
+    $isLoggedIn = isset($_SESSION["user"]);
+    if ($redirect && !$isLoggedIn) {
+        flash("You must be logged in to view this page", "warning");
         die(header("Location: $destination"));
     }
-    return isset($_SESSION["user"]); //se($_SESSION, "user", false, false);
+    return $isLoggedIn; //se($_SESSION, "user", false, false);
 }
 function has_role($role)
 {
@@ -117,4 +119,14 @@ function users_check_duplicate($errorInfo)
         //TODO come up with a nice error message
         flash("<pre>" . var_export($errorInfo, true) . "</pre>");
     }
+}
+function get_url($dest)
+{
+    global $BASE_PATH;
+    if (str_starts_with($dest, "/")) {
+        //handle absolute path
+        return $dest;
+    }
+    //handle relative path
+    return $BASE_PATH . $dest;
 }
