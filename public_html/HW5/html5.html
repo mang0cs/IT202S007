@@ -3,7 +3,6 @@
 <head>
     <script>
         //modified from http://jsfiddle.net/bencentra/q1s8gmqv/?utm_source=website&utm_medium=embed&utm_campaign=q1s8gmqv
-       
         var canvas;
         var context;
         var loop;
@@ -13,8 +12,8 @@
         var paddleWidth = 25;
         var paddleHeight = 100;
         var ballSize = 10;
-        var ballSpeed = 2;
-        var paddleSpeed = 5;
+        var ballSpeed = 9;
+        var paddleSpeed = 15;
         var drawables = [];
         // Key Codes
         var W = 87;
@@ -22,7 +21,6 @@
         var UP = 38;
         var DOWN = 40;
         var visibilityPercent = 0.6;
-
         // Keep track of pressed keys
         var keys = {
             W: false,
@@ -30,7 +28,6 @@
             UP: false,
             DOWN: false
         };
-
         // Keep track of the score
         var leftScore = 0;
         var rightScore = 0;
@@ -49,16 +46,17 @@
                 resetBall();
                 attachKeyListeners();
                 loop = window.setInterval(gameLoop, 16); //16ms
-                canvas.focus();
             }
         }
+        function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
         function resetBall() {
             ball.x = canvas.width / 2 - ball.w / 2;
             ball.y = canvas.height / 2 - ball.w / 2;
             // Modify the ball object to have two speed properties, one for X and one for Y
             ball.sX = ballSpeed;
             ball.sY = ballSpeed / 2;
-
             // Randomize initial direction
             if (Math.random() > 0.5) {
                 ball.sX *= -1;
@@ -67,6 +65,8 @@
             if (Math.random() > 0.5) {
                 ball.sY *= -1;
             }
+            // Randomize initial speed
+            ballSpeed = getRandomArbitrary(5,15);
         }
         // Bounce the ball off of a paddle
         function bounceBall() {
@@ -145,7 +145,6 @@
         function doAI() {
             if (ball.x >= canvas.width * visibilityPercent) {
                 let paddleHalf = paddleHeight / 2;
-
                 if (ball.y > rightPaddle.y + paddleHalf) {
                     rightPaddle.y += rightPaddle.s;
                 } else if (ball.y < rightPaddle.y) {
@@ -201,11 +200,15 @@
             //left side of ball passes left side of paddle
             if (ball.x < leftPaddle.x) {
                 rightScore++;
+                canvas.width = canvas.width - 100;
+                rightPaddle.x = rightPaddle.x - 100;
                 resetBall();
             }
             //right side of ball passes right side of paddle 
             else if (ball.x + ball.w > rightPaddle.x + rightPaddle.w) {
                 leftScore++;
+                canvas.width = canvas.width - 100;
+                rightPaddle.x = rightPaddle.x - 100;
                 resetBall();
             }
         }
@@ -224,20 +227,34 @@
             context.fillStyle = '#FFFFFF';
             context.fillRect(0, 0, canvas.width, canvas.height);
         }
-
+        function endGame() {
+	erase();
+  context.fillStyle = '#000000';
+  context.font = '24px Arial';
+  context.textAlign = 'center';
+  var winner = 1;
+  if (rightScore === 5) winner = 2;
+  context.fillText('Player ' + winner + ' wins!', canvas.width/2, canvas.height/2);
+  window.clearInterval;
+  window.setInterval(endGame,16)
+}
         function gameLoop() {
             erase();
             movePaddle();
             doAI();
             moveBall();
-
             checkPaddleCollision();
             checkScore();
             drawScores();
-            //draw stuff
-            for (let i = 0; i < drawables.length; i++) {
+            if (leftScore == 5 || rightScore == 5) {
+  	            endGame();
+            } 
+            else{
+                //draw stuff
+                for (let i = 0; i < drawables.length; i++) {
                 drawables[i].draw();
             }
+        }
         }
     </script>
     <style>
@@ -249,7 +266,6 @@
         }
     </style>
 </head>
-
 <body onload="init();">
     <div>
     <h1 style="display: inline;">HW5-HTML5</h1>
@@ -258,10 +274,8 @@
     <a href="http://bencentra.com/2017-07-11-basic-html5-canvas-games.html">Collection of Canvas based games by Ben
         Centra</a>
     <main>
-        <canvas tabindex="0" id="board" width="600px" height="600px" >
-
+        <canvas tabindex="0" id="board" width="1500px" height="600px" >
         </canvas>
     </main>
 </body>
-
 </html>
