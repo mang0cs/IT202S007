@@ -32,7 +32,7 @@
       - Pull Requests
         - https://github.com/mang0cs/IT202S007/pull/16
       - Screenshots
-        - ![register screen](Images/register.png)
+        - 
           - The register screen
     - [x] (10/7/21) Users will be able to login to their account
       - List of Evidence of Feature Completion
@@ -42,7 +42,7 @@
         - https://github.com/mang0cs/IT202S007/pull/16
         - https://github.com/mang0cs/IT202S007/pull/32
       - Screenshots
-        - ![login screen](Images/login.png)
+        - 
           - The login screen
     - [x] (mm/dd/yyyy of completion) Users will be able to logout
       - List of Evidence of Feature Completion
@@ -96,8 +96,8 @@
       - Pull Requests
         - https://github.com/mang0cs/IT202S007/pull/33
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - 
+          - Profile screen
     - [x] (10/28/21) User will be able to edit their profile
       - List of Evidence of Feature Completion
       - Status: Completed
@@ -105,8 +105,8 @@
       - Pull Requests
         - https://github.com/mang0cs/IT202S007/pull/33
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - 
+          - Profile screen, able to edit 
 
 - Milestone 2
 - Milestone 3
