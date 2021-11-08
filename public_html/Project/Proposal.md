@@ -25,90 +25,90 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-    - [ ] (mm/dd/yyyy of completion) User will be able to register a new account
-     - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - [x] (10/7/2021) User will be able to register a new account
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-dev.herokuapp.com/Project/register.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/16
+      - Screenshots
+        - 
+          - The register screen
+    - [x] (10/7/21) Users will be able to login to their account
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-dev.herokuapp.com/Project/login.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/16
+        - https://github.com/mang0cs/IT202S007/pull/32
+      - Screenshots
+        - 
+          - The login screen
+    - [x] (mm/dd/yyyy of completion) Users will be able to logout
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-dev.herokuapp.com/Project/logout.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/16
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Users will be able to login to their account
-         - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - [x] (10/26/21) Basic security rules implemented
+      - List of Evidence of Feature Completion
+      - Status: Completed      
+      - Direct Link: https://ucid-dev.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/31
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Users will be able to logout
-         - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - [x] (10/26/21) Basic Roles implemented
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-dev.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/31
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Basic security rules implemented
-     - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - [x] (10/18/21) Sites should have basic styles/theme applied; everything should be styled
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-dev.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/29
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Basic Roles implemented
-     - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+          - The login page is styled
+    - [x] (10/7/21) Any output messages/errors should be "user friendly"
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-dev.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/18
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Sites should have basic styles/theme applied; everything should be styled
-         - List of Evidence of Feature Completion
+          - Flash messages for errors/alerts
+    - [x] (10/28/21) User will be able to see their profile
+      - List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Direct Link: https://ucid-dev.herokuapp.com/Project/profile.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/33
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Any output messages/errors should be "user friendly"
-         - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+        - 
+          - Profile screen
+    - [x] (10/28/21) User will be able to edit their profile
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-dev.herokuapp.com/Project/profile.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/33
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) User will be able to see their profile
-         - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-      - Pull Requests
-        - PR link #1 (repeat as necessary)
-      - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) User will be able to edit their profile
-         - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-      - Pull Requests
-        - PR link #1 (repeat as necessary)
-      - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - 
+          - Profile screen, able to edit 
 
 - Milestone 2
-  ### placeholder
 - Milestone 3
 - Milestone 4
 ### Intructions
