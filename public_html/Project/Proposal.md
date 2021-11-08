@@ -108,6 +108,7 @@
           - Screenshot #1 description explaining what you're trying to show
 
 - Milestone 2
+  ### placeholder
 - Milestone 3
 - Milestone 4
 ### Intructions
