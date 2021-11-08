@@ -2,10 +2,10 @@
 
 # Project Name: Simple Arcade
 ## Project Summary: This project will create a simple Arcade with scoreboards and competitions based on the implemented game.
-## Github Link: (Prod Branch of Project Folder)
-## Project Board Link: 
-## Website Link: (Heroku Prod of Project folder)
-## Your Name:
+## Github Link: https://github.com/mang0cs/IT202S007/tree/prod/public_html/Project
+## Project Board Link: https://github.com/mang0cs/IT202S007/projects/1
+## Website Link: https://ucid-prod.herokuapp.com/Project/login.php
+## Your Name: Erantha Arachchi
 
 <!--
 ### Line item / Feature template (use this for each bullet point)
@@ -25,87 +25,90 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-    - [ ] (mm/dd/yyyy of completion) User will be able to register a new account
+    - [x] (10/7/2021) User will be able to register a new account
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/register.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/16
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Users will be able to login to their account
+        - ![image](https://user-images.githubusercontent.com/89930158/140804731-13d8e128-9721-4be0-83e7-6c8cc1254108.png)
+          - The register screen
+    - [x] (10/7/21) Users will be able to login to their account
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/16
+        - https://github.com/mang0cs/IT202S007/pull/32
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Users will be able to logout
+        - ![image](https://user-images.githubusercontent.com/89930158/140804705-1e2f9c9d-1e40-4b55-b8e2-28222f2fa9bf.png)
+          - The login screen
+    - [x] (mm/dd/yyyy of completion) Users will be able to logout
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/logout.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/16
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Basic security rules implemented
+        - ![image](https://user-images.githubusercontent.com/89930158/140804584-c97e942d-0493-4024-96ce-60c045910a7a.png)
+          - Code for logging out
+    - [x] (10/26/21) Basic security rules implemented
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed      
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/31
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Basic Roles implemented
+        - ![image](https://user-images.githubusercontent.com/89930158/140804391-ef070d9b-f729-430f-b5fb-5fccfbab901e.png)
+          - Warning if user is not admin and trying to view a restricted page
+        - ![image](https://user-images.githubusercontent.com/89930158/140804501-ba522c24-5446-45de-b283-568f7ad1c65c.png)
+          - Sanitization and Validation
+    - [x] (10/26/21) Basic Roles implemented
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/31
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Sites should have basic styles/theme applied; everything should be styled
+        - ![image](https://user-images.githubusercontent.com/89930158/140803947-be121bf1-0167-496b-92b6-bd5177d57ed1.png)
+          - On the left hand side are all the admin php files that create roles.
+    - [x] (10/18/21) Sites should have basic styles/theme applied; everything should be styled
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/29
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Any output messages/errors should be "user friendly"
+        - ![image](https://user-images.githubusercontent.com/89930158/140803821-17322dee-d7f1-4845-9e8a-3243cb53c6cb.png)
+          - The login page is styled
+    - [x] (10/7/21) Any output messages/errors should be "user friendly"
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/login.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/18
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) User will be able to see their profile
+        - ![image](https://user-images.githubusercontent.com/89930158/140803501-fefff858-14f2-4c56-a000-202a97c704df.png)
+          - Flash messages for errors/alerts
+    - [x] (10/28/21) User will be able to see their profile
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/33
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) User will be able to edit their profile
+        - ![image](https://user-images.githubusercontent.com/89930158/140803353-c8055912-a387-4886-b314-906654e8eb8e.png)
+          - Profile screen
+    - [x] (10/28/21) User will be able to edit their profile
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/33
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![image](https://user-images.githubusercontent.com/89930158/140803367-1f5f43ec-93eb-4999-a0c7-854f83a2df6e.png)
+          - Profile screen, able to edit 
 
 - Milestone 2
   - [ ] (mm/dd/yyyy of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
@@ -144,8 +147,7 @@
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-
-
+          
 - Milestone 3
 - Milestone 4
 ### Intructions
