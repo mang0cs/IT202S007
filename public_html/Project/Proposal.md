@@ -81,6 +81,7 @@
         - https://github.com/mang0cs/IT202S007/pull/29
       - Screenshots
         - ![image](https://user-images.githubusercontent.com/89930158/140803821-17322dee-d7f1-4845-9e8a-3243cb53c6cb.png)
+
           - The login page is styled
     - [x] (10/7/21) Any output messages/errors should be "user friendly"
       - List of Evidence of Feature Completion
@@ -111,30 +112,30 @@
           - Profile screen, able to edit 
 
 - Milestone 2
-  - [ ] (mm/dd/yyyy of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
+  - [x] (12/1/2021) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator (may build off of a sample from the site shared in class)
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.heroukuapp.com/project/proj.html
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/57
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![image](https://user-images.githubusercontent.com/89930158/140236391-d7830136-370a-4b89-8609-96aeb0337e17.PNG)
+          - The pong game from HW5 that will serve as the basis for my project
   - [ ] (mm/dd/yyyy of completion) The system will save the user’s score at the end of the game if the user is logged in
       - List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/18
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
   - [ ] (mm/dd/yyyy of completion) The user will be able to see their last 10 scores
       - List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Direct Link: https://ucid-dev.herokuapp.com/Project/profile.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/33
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
@@ -143,11 +144,11 @@
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/33
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
           - Screenshot #1 description explaining what you're trying to show
-          
+         
 - Milestone 3
 - Milestone 4
 ### Intructions

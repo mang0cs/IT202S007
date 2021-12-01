@@ -7,16 +7,17 @@
 }
 
 .alert-danger {
-    background-color: red;
+    background-color: black;
 }
 
 .alert-info {
     background-color: teal;
 }
-nav li{display: inline; background-color: white;}
+nav li{display: inline; background-color: black;}
 nav li a{color: white}
+
 body{
     background-color: black;
-    color:black;
+    color: white;
 
 }
