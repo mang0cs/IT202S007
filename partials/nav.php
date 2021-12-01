@@ -45,7 +45,9 @@ require_once(__DIR__ . "/../lib/functions.php");
             <li><a href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign Roles</a></li>
         <?php endif; ?>
         <?php if (is_logged_in()) : ?>
-            <li><a href="<?php echo get_url('logout.php'); ?>">Logout</a></li>
+            <li><a href = "proj.html">Play!</a></li>
+            <li><a href="profile.php">Profile</a></li>
+            <li><a href="logout.php">Logout</a></li>
         <?php endif; ?>
     </ul>
 </nav>

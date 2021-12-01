@@ -14,7 +14,7 @@
     background-color: teal;
 }
 nav li{display: inline; background-color: black;}
-nav li a{color: white}
+nav li a{color: red}
 
 body{
     background-color: black;
