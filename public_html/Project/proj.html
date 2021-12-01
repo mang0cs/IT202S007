@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<?php require_once(__DIR__ . "/lib/helpers.php"); ?>
+
 <html>
 
 <head>
@@ -182,17 +183,10 @@
 
         function AddScore(){
             let xhttp = new XMLHttpRequest();
-            let url = "scoretoserver.php";
+            let url = "savescore.php";
             let scoretosend = score;
             xhttp.open("POST", url, true);
             xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-         /*   xhttp.onreadystatechange = function(){
-                if(xhttp.readyState == 4 && xhttp.status == 200){
-                    let data = xhttp.responseText;
-                    document.getElementById("status").innerHTML = data;
-                }
-            }
-	*/
             xhttp.send("myscore=" + scoretosend);
 
 
