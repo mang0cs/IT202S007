@@ -1,6 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
+<?php
+require(__DIR__ . "/../../partials/nav.php");
+?>
+<div class="container-fluid">
+    <h1>Pong: Remastered</h1>
+    <canvas tabindex="1" width="720px" height="720px"></canvas>
+</div>
     <script>
         //modified from http://jsfiddle.net/bencentra/q1s8gmqv/?utm_source=website&utm_medium=embed&utm_campaign=q1s8gmqv
         var canvas;
@@ -265,17 +269,3 @@
             border: 1px dotted black;
         }
     </style>
-</head>
-<body onload="init();">
-    <div>
-    <h1 style="display: inline;">HW5-HTML5</h1>
-    <h3 style="display: inline;"><a href="index.html">Back</a></h3>
-    </div>
-    <a href="http://bencentra.com/2017-07-11-basic-html5-canvas-games.html">Based on the Collection of Canvas based games by Ben
-        Centra</a>
-    <main>
-        <canvas tabindex="0" id="board" width="1500px" height="600px" >
-        </canvas>
-    </main>
-</body>
-</html>
