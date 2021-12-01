@@ -81,7 +81,6 @@
         - https://github.com/mang0cs/IT202S007/pull/29
       - Screenshots
         - ![image](https://user-images.githubusercontent.com/89930158/140803821-17322dee-d7f1-4845-9e8a-3243cb53c6cb.png)
-
           - The login page is styled
     - [x] (10/7/21) Any output messages/errors should be "user friendly"
       - List of Evidence of Feature Completion
