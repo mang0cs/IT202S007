@@ -1,7 +1,6 @@
 <?php require_once(__DIR__ . "/partials/nav.php"); ?>
 
 <?php
-// don't forgot this will be a get method
 $query = $_GET["score"];
 $result = [];
 if($query == "Top weekly") {
