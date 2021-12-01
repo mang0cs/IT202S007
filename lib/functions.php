@@ -120,6 +120,15 @@ function users_check_duplicate($errorInfo)
         flash("<pre>" . var_export($errorInfo, true) . "</pre>");
     }
 }
+
+function safer_echo($var) {
+    if (!isset($var)) {
+        echo "";
+        return;
+    }
+    echo htmlspecialchars($var, ENT_QUOTES, "UTF-8");
+}
+
 function get_url($dest)
 {
     global $BASE_PATH;
