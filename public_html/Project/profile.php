@@ -111,6 +111,8 @@ $username = get_username();
     </div>
     <input type="submit" value="Update Profile" name="save" />
 </form>
+<a href = "scorehistory.php"><button type="button"> Previous scores </button></a>
+
 
 <script>
     function validate(form) {
@@ -142,7 +144,18 @@ $username = get_username();
         }
         return isValid;
     }
+    
 </script>
+<form action="topScores.php" method ="get">
+    <label for="score">Choose the top score: </label>
+    <input list ="scores" name = "score" id ="score">
+    <datalist id = "scores">
+        <option value= "Top weekly">
+        <option value="Top monthly">
+        <option value ="Top Lifetime">
+    </datalist>
+    <input type = "submit">
+    </form> 
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
