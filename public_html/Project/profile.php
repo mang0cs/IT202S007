@@ -111,8 +111,9 @@ $username = get_username();
     </div>
     <input type="submit" value="Update Profile" name="save" />
 </form>
-<a href = "scorehistory.php"><button type="button"> Previous scores </button></a>
-
+<form action ="scorehistory.php" method ="POST">
+        <input type = "submit" value = "Previous scores">
+    </form>
 
 <script>
     function validate(form) {
