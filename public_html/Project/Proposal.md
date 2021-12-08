@@ -152,87 +152,91 @@
 
 
 - Milestone 3
-  - [ ] (mm/dd/yyyy of completion) Users will have points associated with their account
+  - [x] (12/8/2021) Users will have points associated with their account
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/80
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) Create a PointsHistory table (id, user_id, point_change, reason, created)
+        - ![image](https://user-images.githubusercontent.com/89930158/145293384-ac88e764-e989-4bbc-bd15-165d4b7b025b.png)
+          - Code snippet showing the points (score) table with a default of 0 points
+  - [x] (12/8/2021) Create a PointsHistory table (id, user_id, point_change, reason, created)
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/81
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) Competitions should have the following columns (id, name, created, duration, expires (now + duration), current_reward, starting_reward, join_fee, current_participants, min_participants, paid_out (boolean), min_score, first_place_per, second_place_per, third_place_per, cost_to_create, created, modified)
+        - ![image](https://user-images.githubusercontent.com/89930158/145293667-74619b2a-6085-4aad-89a4-836e86f69630.png)
+          - Code snippet of the points history table
+  - [x] (12/8/2021) Competitions should have the following columns (id, name, created, duration, expires (now + duration), current_reward, starting_reward, join_fee, current_participants, min_participants, paid_out (boolean), min_score, first_place_per, second_place_per, third_place_per, cost_to_create, created, modified)
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/83
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) Users will be able to create a competition
+        - ![image](https://user-images.githubusercontent.com/89930158/145293909-fd4b0bd8-0db7-4fb7-8d9c-afcad5d0d55b.png)
+          - Code snippet for the competitions table
+  - [x] (12/8/2021) Users will be able to create a competition
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/create_competition.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/82
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) Each new participant causes the Reward value to increase by at least 1 or 50% of the joining fee rounded up
+        - ![image](https://user-images.githubusercontent.com/89930158/145296156-61616c80-622a-46a2-bacf-7b0bea9e5d23.png)
+          - Via profile, users can create a competition
+        - ![image](https://user-images.githubusercontent.com/89930158/145296980-4e625b3a-d058-480f-9d2e-f624edf24f36.png)
+          - Code snippet for creating a competition
+  - [x] (12/8/2021) Each new participant causes the Reward value to increase by at least 1 or 50% of the joining fee rounded up
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/84
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Have a page where the User can see active competitions (not expired)
+        - ![image](https://user-images.githubusercontent.com/89930158/145302179-e3120589-6175-4cbd-9392-2997c141b6ac.png)
+          - Code snippet to show reward increasing
+  - [x] (12/8/2021) Have a page where the User can see active competitions (not expired)
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/mycompetition.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/84
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Will need an association table CompetitionParticpants (id, comp_id, user_id, created)
+        - ![image](https://user-images.githubusercontent.com/89930158/145300387-c5e09b91-7914-4842-a000-b4e0f63f7313.png)
+          - Via profile, users can view any active competitions
+   - [x] (12/8/2021) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/mycompetition.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/83
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Users can join active competitions
+        - ![image](https://user-images.githubusercontent.com/89930158/145302393-699e706d-c6b3-4602-824c-26bd34b71f7e.png)
+          - Code snippet for the competition participants table
+   - [x] (12/8/2021) Users can join active competitions
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/mycompetition.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/84
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-    - [ ] (mm/dd/yyyy of completion) Create function that calculates competition winners
+        - ![image](https://user-images.githubusercontent.com/89930158/145300387-c5e09b91-7914-4842-a000-b4e0f63f7313.png)
+          - Via profile, users can view any active competitions and then join them
+        - ![image](https://user-images.githubusercontent.com/89930158/145303287-7dbcb635-b13a-402a-8e3f-ce995c6e9c09.png)
+          - Code snippet for joining an active competition
+   - [x] (12/8/2021) Create function that calculates competition winners
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/mycompetition.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/84
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+        - ![image](https://user-images.githubusercontent.com/89930158/145303369-4a78c0ca-a4f8-4e79-b990-2e1f87184370.png)
+          - Code snippet for the function that calculates the competition winners
 - Milestone 4
 ### Intructions
 #### Don't delete this
