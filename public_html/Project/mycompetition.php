@@ -1,4 +1,4 @@
-<?php require_once(__DIR__ . "/partials/nav.php"); ?>
+<?php require_once(__DIR__ . "/../../partials/nav.php"); ?>
 <?php
 if (!is_logged_in()) {
     //this will redirect to login and kill the rest of this script (prevent it from executing)
@@ -77,4 +77,4 @@ else {
 <?php else: ?>
     No competitions available right now
 <?php endif; ?>
-<?php require(__DIR__ . "/partials/flash.php");
+<?php require(__DIR__ . "/../../partials/flash.php");
