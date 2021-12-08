@@ -20,9 +20,6 @@ if (isset($_POST["join"])) {
                 $r = $stmt->execute([":cid" => $_POST["cid"], ":uid" => get_user_id()]);
                 if ($r) {
                     flash("Successfully join competition", "success");
-                    // continue from here i need to update the competition table and increase the particiapant and reward by 1 also the distribution
-                    // of the reward will take place in this so i need to be careful with the table
-                    // checked the score already so just insert the participants and reward into competition
                     $participant = $result["participants"] + 1;
                     $reward = $result["reward"] + 1;
                     $stmt = $db->prepare("UPDATE Competitions set participants = :p, reward = :r where id = :cid");
