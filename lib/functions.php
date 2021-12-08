@@ -139,3 +139,9 @@ function get_url($dest)
     //handle relative path
     return $BASE_PATH . $dest;
 }
+function getScore(){
+    if(is_logged_in() && isset($_SESSION["user"]["Score"])){
+        return $_SESSION["user"]["Score"];
+    }
+    return 0;
+}
