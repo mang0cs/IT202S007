@@ -147,6 +147,7 @@ $username = get_username();
     }
     
 </script>
+<br>
 <form action="topScores.php" method ="get">
     <label for="score">Choose the top score: </label>
     <input list ="scores" name = "score" id ="score">
@@ -157,6 +158,18 @@ $username = get_username();
     </datalist>
     <input type = "submit">
     </form> 
+    <br>
+    <form action ="create_competition.php" method ="POST">
+        <input type = "submit" value = "Create Competition">
+    </form>
+
+    <form action ="mycompetition.php" method ="POST">
+        <input type = "submit" value = "My competition">
+    </form>
+
+    <form action ="Competition.php" method ="POST">
+        <input type = "submit" value = "Running Competition">
+    </form>
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
