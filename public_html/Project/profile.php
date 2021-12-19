@@ -27,6 +27,12 @@ if (isset($_POST["makePriv"])) {
             flash("Error updating profile");
         }
 }
+if(isset($_GET["id"])){
+    $id = $_GET["id"];
+    }
+    else{
+    $id= get_user_id();
+    }
 if (isset($_POST["save"])) {
     $email = se($_POST, "email", null, false);
     $username = se($_POST, "username", null, false);
