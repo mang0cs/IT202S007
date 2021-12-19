@@ -189,11 +189,15 @@ $username = get_username();
     </form>
 
     <form action ="mycompetition.php" method ="POST">
-        <input type = "submit" value = "My competition">
+        <input type = "submit" value = "My Competition">
     </form>
 
     <form action ="Competition.php" method ="POST">
         <input type = "submit" value = "Running Competition">
+    </form>
+
+    <form action ="competitionhistory.php" method ="POST">
+        <input type = "submit" value = "Competition History">
     </form>
         <form method="POST">
             <table style="width:100%">
