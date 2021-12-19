@@ -3,11 +3,11 @@
 }
 
 .alert-warning {
-    background-color: yellow;
+    background-color: orange;
 }
 
 .alert-danger {
-    background-color: black;
+    background-color: red;
 }
 
 .alert-info {
