@@ -7,6 +7,9 @@ if (!is_logged_in()) {
 ?>
 <?php
 $db = getDB();
+$per_page = 10;
+$query = "SELECT count(*) as total FROM Competitions WHERE expires > current_timestamp ORDER BY expires ASC";
+paginate($query, [], $per_page);
 if (isset($_POST["join"])) {
     $score = getScore();
     $stmt = $db->prepare("select fee, participants, reward, from Competitions where id = :id && expires > current_timestamp && paid_out = 0");
@@ -85,4 +88,5 @@ Already Registered
 <?php else: ?>
 No competitions available right now
 <?php endif; ?>
+<?php include(__DIR__ . "/../../partials/pagination.php");?>
 <?php require(__DIR__ . "/../../partials/flash.php");

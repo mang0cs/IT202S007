@@ -193,7 +193,7 @@ $username = get_username();
     </form>
 
     <form action ="Competition.php" method ="POST">
-        <input type = "submit" value = "Running Competition">
+        <input type = "submit" value = "Active Competitions">
     </form>
 
     <form action ="competitionhistory.php" method ="POST">
