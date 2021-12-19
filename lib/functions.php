@@ -145,3 +145,9 @@ function getScore(){
     }
     return 0;
 }
+function get_status() {
+    if (is_logged_in() && isset($_SESSION["user"]["status"])) {
+        return $_SESSION["user"]["status"];
+    }
+    return "";
+}

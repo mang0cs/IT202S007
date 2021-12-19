@@ -5,6 +5,28 @@ if (!is_logged_in()) {
 }
 ?>
 <?php
+$db = getDB();
+if (isset($_POST["makePub"])) {
+    $stmt = $db->prepare("UPDATE Users set status = :status where id = :id");
+        $r = $stmt->execute([":status" => "public", ":id" => get_user_id()]);
+        if ($r) {
+            flash("Your profile is public");
+        }
+        else {
+            flash("Error updating profile");
+        }
+}
+
+if (isset($_POST["makePriv"])) {
+    $stmt = $db->prepare("UPDATE Users set status = :status where id = :id");
+        $r = $stmt->execute([":status" => "private", ":id" => get_user_id()]);
+        if ($r) {
+            flash("Your profile is private");
+        }
+        else {
+            flash("Error updating profile");
+        }
+}
 if (isset($_POST["save"])) {
     $email = se($_POST, "email", null, false);
     $username = se($_POST, "username", null, false);
@@ -80,6 +102,8 @@ if (isset($_POST["save"])) {
         }
     }
 }
+
+
 ?>
 
 <?php
@@ -147,6 +171,7 @@ $username = get_username();
     }
     
 </script>
+
 <br>
 <form action="topScores.php" method ="get">
     <label for="score">Choose the top score: </label>
@@ -170,6 +195,15 @@ $username = get_username();
     <form action ="Competition.php" method ="POST">
         <input type = "submit" value = "Running Competition">
     </form>
+        <form method="POST">
+            <table style="width:100%">
+            <div id="currStatus"></div>
+            <tr>
+        <td>  <input class="btn btn-primary" type="submit" name="makePub" value="Set your profile to Public"/>  </td>
+        <td>  <input class="btn btn-primary" type="submit" name="makePriv" value="Set your profile to Private"/>  </td>
+            </tr>
+            </table>
+        </form>
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
