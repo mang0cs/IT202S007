@@ -88,4 +88,5 @@ Already Registered
 <?php else: ?>
 No competitions available right now
 <?php endif; ?>
+<?php include(__DIR__ . "/../../partials/pagination.php");?>
 <?php require(__DIR__ . "/../../partials/flash.php");
