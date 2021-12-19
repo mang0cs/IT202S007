@@ -177,5 +177,5 @@ function get_status() {
         return $_SESSION["user"]["status"];
     }
     return "";
-
+}
 }
