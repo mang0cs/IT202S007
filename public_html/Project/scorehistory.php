@@ -5,7 +5,7 @@ $id = get_user_id();
 $result = [];
 if(isset($id)) {
     $db = getDB();
-    $stmt = $db->prepare("SELECT user_id,score,Users.username FROM Scores as Scores JOIN Users on Scores.user_id = Users.id where Scores.user_id = :id LIMIT 10");
+    $stmt = $db->prepare("SELECT user_id,Scores.score,Users.username FROM Scores as Scores JOIN Users on Scores.user_id = Users.id where Scores.user_id = :id LIMIT 10");
     $r = $stmt->execute([":id" => $id]);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     if (!$result) {
