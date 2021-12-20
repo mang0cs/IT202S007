@@ -29,6 +29,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="list-group">
             <?php if (isset($results) && count($results)): ?>
                 <?php foreach ($results as $r): ?>
+                    <?php $compID=$r["id"]; ?>
                     <div class="list-group-item" style="background-color: #D7C51B">
                         <div class="row">
                             
@@ -38,6 +39,10 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <?php if ($r["user_id"] == get_user_id()): ?>
                                     (Created)
                                 <?php endif; ?>
+                            </div>
+                            <div class="col">
+                                ID: 
+                                <?php safer_echo($compID); ?>
                             </div>
                             <div class="col">
                                 Participants: 
@@ -58,7 +63,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <?php safer_echo($r["expires"]); ?>
                             </div>
 			    <div class="col">
-				    <?php $compID=$r["id"]; ?>
+				    
 				    <a href="check_scoreboard.php?id=<?php echo $compID;?>"><?php echo "Click here to see the Scoreboard";?></a>
                             </div>
                             <div class="col">

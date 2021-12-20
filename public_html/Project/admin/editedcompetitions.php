@@ -11,16 +11,15 @@ if (!has_role("Admin")) {
 <?php 
 
 if(isset($_POST["name"])){
-
+    $compID = $_POST["compID"]; 
     $name  = $_POST["name"];
     $duration = $_POST["duration"];
     $min_score = $_POST["min_score"];
-    $split = $_POST["split"];
     $reward = $_POST["reward"];
     $fee = $_POST["fee"];
     $db = getDB();
     if(isset($name)){
-        $stmt = $db -> prepare("UPDATE Competitions set name = :name, duration = :duration, min_score = :min_score, split = :split, reward = :reward, fee = :fee where id = :id");
+        $query = "UPDATE Competitions set name = :name, duration = :duration, min_score = :min_score, reward = :reward, fee = :fee, first_place_per = :fp, second_place_per = :sp, third_place_per = :tp where id = :id";
         $stmt = $db->prepare($query);
         $params = [
             ":id" => $compID,
@@ -30,6 +29,7 @@ if(isset($_POST["name"])){
             ":fee" => $fee,
             ":reward" => $reward
         ];
+        
         switch ((int)$_POST["split"]) {
             // case 0:
               //   break;  using default for this
@@ -53,7 +53,7 @@ if(isset($_POST["name"])){
                 $params[":sp"] = .3;
                 $params[":tp"] = .1;
                 break;
-	    case 5:
+	        case 5:
                 $params[":fp"] = .5;
                 $params[":sp"] = .3;
                 $params[":tp"] = .2;
@@ -68,7 +68,7 @@ if(isset($_POST["name"])){
 
         if($r)
         {
-            flash("updated sucessfully with id: " . $id);
+            flash("updated sucessfully with id: " . $compID);
 
         }
         else {
@@ -118,6 +118,10 @@ if(isset($_POST["name"])){
             <div class="form-group">
                 <label for="f">Entry Fee</label>
                 <input id="f" name="fee" type="number" min="0" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="f">Competition ID</label>
+                <input id="f" name="compID" type="number" min="0" class="form-control"/>
             </div>
             <input type="submit" class="btn btn-success" value="Update"/>
         </form>
