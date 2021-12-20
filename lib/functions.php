@@ -178,6 +178,7 @@ function get_status() {
 }
 }
 function get10week(){
+    error_reporting(0);
     $arr = [];
     $db = getDB();
     $stmt = $db->prepare("SELECT score from Scores where created >= :timeCon order by score desc limit 10");
