@@ -1,46 +1,35 @@
-<?php require_once(__DIR__ . "/../../partials/nav.php"); ?>
+<?php require_once(__DIR__ . "/../../../partials/nav.php"); ?>
 <?php
-if (!is_logged_in()) {
+if (!has_role("Admin")) {
     //this will redirect to login and kill the rest of this script (prevent it from executing)
     flash("You don't have permission to access this page");
     die(header("Location: login.php"));
 }
 ?>
-<?php
 
-flash("Your balance is " . getBalance() . "!");
-if (isset($_POST["name"])) {
 
-    $cost = (int)$_POST["reward"];
-    if ($cost <= 0) {
-        $cost = 0;
-    }
-    $cost++;
-    //flash("cost is $cost");
-    //TODO other validation
-    $balance = getBalance();
-    if ($cost > $balance) {
-        flash("You can't afford to create this competition", "warning");
-    }
-    else {
-        $db = getDB();
-        $expires = new DateTime();
-        $days = (int)$_POST["duration"];
-        $expires->add(new DateInterval("P" . $days . "D"));
-        $expires = $expires->format("Y-m-d H:i:s");
-        $query = "INSERT INTO Competitions (name, duration, expires, cost, min_score, first_place_per, second_place_per, third_place_per, fee, user_id, reward) VALUES(:name, :duration, :expires, :cost, :min_score, :fp, :sp, :tp, :fee, :uid, :reward)";
+<?php 
+
+if(isset($_POST["name"])){
+    $compID = $_POST["compID"]; 
+    $name  = $_POST["name"];
+    $duration = $_POST["duration"];
+    $min_score = $_POST["min_score"];
+    $reward = $_POST["reward"];
+    $fee = $_POST["fee"];
+    $db = getDB();
+    if(isset($name)){
+        $query = "UPDATE Competitions set name = :name, duration = :duration, min_score = :min_score, reward = :reward, fee = :fee, first_place_per = :fp, second_place_per = :sp, third_place_per = :tp where id = :id";
         $stmt = $db->prepare($query);
         $params = [
-            ":name" => $_POST["name"],
-            ":duration" => $days,
-            ":expires" => $expires,
-            ":cost" => $cost,
-            ":min_score" => $_POST["min_score"],
-            ":uid" => get_user_id(),
-            ":fee" => $_POST["fee"],
-            ":reward" => $_POST["reward"]
+            ":id" => $compID,
+            ":name" => $name,
+            ":duration" => $duration,
+            ":min_score" => $min_score,
+            ":fee" => $fee,
+            ":reward" => $reward
         ];
-        flash(get_user_id());
+        
         switch ((int)$_POST["split"]) {
             // case 0:
               //   break;  using default for this
@@ -64,7 +53,7 @@ if (isset($_POST["name"])) {
                 $params[":sp"] = .3;
                 $params[":tp"] = .1;
                 break;
-	    case 5:
+	        case 5:
                 $params[":fp"] = .5;
                 $params[":sp"] = .3;
                 $params[":tp"] = .2;
@@ -76,44 +65,28 @@ if (isset($_POST["name"])) {
                 break;
         }
         $r = $stmt->execute($params);
-        if ($r) {
-            flash("Successfully created competition", "success");
-            
-            		$user_id=get_user_id();
-			$points_change = -($cost);
-			$reason = "Created a new competition";
-            
-            $stmt = $db->prepare("INSERT INTO PointsHistory( user_id, points_change, reason) VALUES(:user_id,:points_change,:reason)");
-			$params = array( ":user_id" => $user_id, ":points_change" => $points_change, ":reason" => $reason);
-			$r = $stmt->execute($params);
-            
-            $stmt = $db->prepare("UPDATE Users set Score = (SELECT IFNULL(SUM(points_change), 0) FROM PointsHistory p where p.user_id = :id) WHERE id = :id");
-            $params = array(":id" => get_user_id());
-            $r = $stmt->execute($params);
-            
-                //Update the session variable for points/balance
-			    $stmt = $db->prepare("SELECT Score from Users WHERE id = :id LIMIT 1");
-			    $params = array(":id" => get_user_id());
-			    $r = $stmt->execute($params);
-			    if($r){
-				$result = $stmt->fetch(PDO::FETCH_ASSOC);
-				$profilePoints = $result["Score"];
-				$_SESSION["user"]["Score"] = $profilePoints;
-				
-				//flash("Your account has " . $profilePoints . " points.");
-			    }
-            
-            
-            die(header("Location: #"));
+
+        if($r)
+        {
+            flash("updated sucessfully with id: " . $compID);
+
         }
         else {
-            flash("There was a problem creating a competition: " . var_export($stmt->errorInfo(), true), "danger");
+            $e = $stmt -> errorInfo();
+            flash("Error updating: " . var_export($e, true));
         }
     }
-}
+    else{
+        flash("ID isn't set, we need an ID in order to update");
+    }
+ }
+ ?>
+ <?php
+
 ?>
-    <div class="container-fluid">
-        <h3>Create Competition</h3>
+
+<div class="container-fluid">
+        <h3>Edit Competition</h3>
         <form method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
@@ -146,7 +119,11 @@ if (isset($_POST["name"])) {
                 <label for="f">Entry Fee</label>
                 <input id="f" name="fee" type="number" min="0" class="form-control"/>
             </div>
-            <input type="submit" class="btn btn-success" value="Create (Cost: 1)"/>
+            <div class="form-group">
+                <label for="f">Competition ID</label>
+                <input id="f" name="compID" type="number" min="0" class="form-control"/>
+            </div>
+            <input type="submit" class="btn btn-success" value="Update"/>
         </form>
     </div>
-<?php require(__DIR__ . "/../../partials/flash.php");
+<?php require(__DIR__ . "/../../../partials/flash.php");

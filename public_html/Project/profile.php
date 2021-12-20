@@ -5,6 +5,7 @@ if (!is_logged_in()) {
 }
 ?>
 <?php
+flash("Your balance is " . getBalance() . "!");
 $db = getDB();
 if (isset($_POST["makePub"])) {
     $stmt = $db->prepare("UPDATE Users set status = :status where id = :id");
@@ -109,7 +110,10 @@ if (isset($_POST["save"])) {
     }
 }
 
-
+$stmt = $db->prepare("SELECT * from Scores where user_id = :id order by id desc limit 10");
+$params = array(":id" => get_user_id());
+$results = $stmt->execute($params);
+$results = $stmt->fetchAll();
 ?>
 
 <?php
