@@ -1,5 +1,3 @@
-# Project: 
-
 # Project Name: Simple Arcade
 ## Project Summary: This project will create a simple Arcade with scoreboards and competitions based on the implemented game.
 ## Github Link: https://github.com/mang0cs/IT202S007/tree/prod/public_html/Project
