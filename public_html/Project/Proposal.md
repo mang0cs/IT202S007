@@ -289,7 +289,7 @@
       - Status: Completed
       - Direct Link: https://ucid-prod.herokuapp.com/Project/home.php
       - Pull Requests
-        - PR link #1 (repeat as necessary)
+        - https://github.com/mang0cs/IT202S007/pull/99
       - Screenshots
         - ![image](https://user-images.githubusercontent.com/89930158/146839508-15aa6d0a-6d68-4135-98af-7f898afe5821.png)
           - Home page has profile links that direct to user's profile, if it's your profile it redirects to your own profile.
