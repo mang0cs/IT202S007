@@ -7,6 +7,9 @@ if (!is_logged_in()) {
 ?>
 <?php
 $db = getDB();
+$per_page = 10;
+$query = "SELECT count(*) as total FROM Competitions WHERE expires > current_timestamp ORDER BY expires ASC";
+paginate($query, [], $per_page);
 if (isset($_POST["join"])) {
     $score = getScore();
     $stmt = $db->prepare("select fee, participants, reward, from Competitions where id = :id && expires > current_timestamp && paid_out = 0");
@@ -16,7 +19,7 @@ if (isset($_POST["join"])) {
         if ($result) {
             $fee = (int)$result["fee"];
             if ($score >= $fee) {
-                $stmt = $db->prepare("INSERT INTO UserCompetitions(competition_id, user_id) VALUES(:cid, :uid)");
+                $stmt = $db->prepare("INSERT INTO CompetitionParticipants(competition_id, user_id) VALUES(:cid, :uid)");
                 $r = $stmt->execute([":cid" => $_POST["cid"], ":uid" => get_user_id()]);
                 if ($r) {
                     flash("Successfully join competition", "success");
@@ -49,7 +52,7 @@ if (isset($_POST["join"])) {
 
 
 }
-$stmt = $db->prepare("SELECT c.*, UC.user_id as reg FROM Competitions c LEFT JOIN (SELECT * FROM UserCompetitions where user_id = :id) as UC on c.id = UC.competition_id WHERE c.expires > current_timestamp AND paid_out = 0 ORDER BY expires ASC");
+$stmt = $db->prepare("SELECT c.*, UC.user_id as reg FROM Competitions c LEFT JOIN (SELECT * FROM CompetitionParticipants where user_id = :id) as UC on c.id = UC.competition_id WHERE c.expires > current_timestamp AND paid_out = 0 ORDER BY expires ASC");
 $r = $stmt->execute([":id" => get_user_id()]);
 if ($r) {
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -70,6 +73,7 @@ else {
     <div>2 nd place: <?php safer_echo($r["second_place_per"]); ?></div>
     <div>3 rd place: <?php safer_echo($r["third_place_per"]); ?></div>
     <div>expires: <?php safer_echo($r["expires"]); ?></div>
+    <div>Scoreboard: <?php $compID=$r["id"]; ?><a href="check_scoreboard.php?id=<?php echo $compID;?>"><?php echo "Click here to see the Scoreboard";?></a></div>
 
 <?php if ($r["reg"] != get_user_id()): ?>
 <form method="POST">
@@ -85,4 +89,5 @@ Already Registered
 <?php else: ?>
 No competitions available right now
 <?php endif; ?>
+<?php include(__DIR__ . "/../../partials/pagination.php");?>
 <?php require(__DIR__ . "/../../partials/flash.php");

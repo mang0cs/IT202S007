@@ -111,3 +111,4 @@ try {
 } catch (Exception $e) {
     echo $e->getMessage();
     exit("Something went wrong");
+}

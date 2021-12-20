@@ -116,40 +116,42 @@
       - Status: Completed
       - Direct Link: https://ucid-prod.heroukuapp.com/project/proj.html
       - Pull Requests
-        - https://github.com/mang0cs/IT202S007/pull/57
+        - https://github.com/mang0cs/IT202S007/pull/62
       - Screenshots
-        - ![image](https://user-images.githubusercontent.com/89930158/140236391-d7830136-370a-4b89-8609-96aeb0337e17.PNG)
-          - The pong game from HW5 that will serve as the basis for my project
-  - [ ] (mm/dd/yyyy of completion) The system will save the user’s score at the end of the game if the user is logged in
+        - ![image](https://user-images.githubusercontent.com/89930158/144320040-a7ca2aa6-e378-4721-84ea-f6d364571088.png)
+          - The arcade shooter from the sample canvas games that will serve as the basis for the project
+  - [x] (12/1/2021) The system will save the user’s score at the end of the game if the user is logged in
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.heroukuapp.com/project/profile.php
       - Pull Requests
-        - https://github.com/mang0cs/IT202S007/pull/18
+        - https://github.com/mang0cs/IT202S007/pull/63
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) The user will be able to see their last 10 scores
+        - ![image](https://user-images.githubusercontent.com/89930158/144321837-8ad2598e-285a-4491-94ff-d3a295f4dc77.png)
+          - Code snippet to show scores being saved to table at the end of the game
+  - [x] (12/1/2021) The user will be able to see their last 10 scores
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: https://ucid-dev.herokuapp.com/Project/profile.php
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
       - Pull Requests
-        - https://github.com/mang0cs/IT202S007/pull/33
+        - https://github.com/mang0cs/IT202S007/pull/63
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-  - [ ] (mm/dd/yyyy of completion) Create functions that output the following scoreboards
+        - ![image](https://user-images.githubusercontent.com/89930158/144321537-2ae4dfc1-a8b9-4496-bdbe-0a90c4d02e35.png)
+          - Code snippet showing code history
+        - ![image](https://user-images.githubusercontent.com/89930158/144321670-de2257a9-983f-42b0-82c7-fcd42fa20cf7.png)
+          - No scores, therefore no results
+  - [x] (12/1/2021) Create functions that output the following scoreboards
       - List of Evidence of Feature Completion
-      - Status: Pending (Completed, Partially working, Incomplete, Pending)
-      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
       - Pull Requests
-        - https://github.com/mang0cs/IT202S007/pull/33
+        - https://github.com/mang0cs/IT202S007/pull/64
       - Screenshots
-        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
-         
+        - ![image](https://user-images.githubusercontent.com/89930158/144321383-324b2823-d19f-4b82-a5d5-77df2381b8f2.png)
+          - Code snippet showing functions to display top scores
+          
 - Milestone 3
-  - [ ] (mm/dd/yyyy of completion) Users will have points associated with their account
+- [ ] (mm/dd/yyyy of completion) Users will have points associated with their account
       - List of Evidence of Feature Completion
       - Status: Pending (Completed, Partially working, Incomplete, Pending)
       - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -229,8 +231,89 @@
         - PR link #1 (repeat as necessary)
       - Screenshots
         - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-          - Screenshot #1 description explaining what you're trying to show
+          - Screenshot #1 description explaining what you're trying to show      
 - Milestone 4
+- [ ] (mm/dd/yyyy of completion) User can set their profile to be public or private (will need another column in Users table)
+      - List of Evidence of Feature Completion
+      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Pull Requests
+        - PR link #1 (repeat as necessary)
+      - Screenshots
+        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot #1 description explaining what you're trying to show
+  - [ ] (mm/dd/yyyy of completion) User will be able to see their competition history
+      - List of Evidence of Feature Completion
+      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Pull Requests
+        - PR link #1 (repeat as necessary)
+      - Screenshots
+        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot #1 description explaining what you're trying to show
+  - [ ] (mm/dd/yyyy of completion) User with the role of “admin” can edit a competition where paid_out = false
+      - List of Evidence of Feature Completion
+      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Pull Requests
+        - PR link #1 (repeat as necessary)
+      - Screenshots
+        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot #1 description explaining what you're trying to show
+  - [ ] (mm/dd/yyyy of completion) Add pagination to the Active Competitions view
+      - List of Evidence of Feature Completion
+      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Pull Requests
+        - PR link #1 (repeat as necessary)
+      - Screenshots
+        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot #1 description explaining what you're trying to show
+  - [ ] (mm/dd/yyyy of completion) Anywhere a username is displayed should be a link to that user’s profile
+      - List of Evidence of Feature Completion
+      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Pull Requests
+        - PR link #1 (repeat as necessary)
+      - Screenshots
+        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot #1 description explaining what you're trying to show
+    - [ ] (mm/dd/yyyy of completion) Viewing an active or expired competition should show the top 10 scoreboard related to that competition
+      - List of Evidence of Feature Completion
+      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Pull Requests
+        - PR link #1 (repeat as necessary)
+      - Screenshots
+        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot #1 description explaining what you're trying to show
+    - [ ] (mm/dd/yyyy of completion) Game should be fully implemented/complete by this point
+      - List of Evidence of Feature Completion
+      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Pull Requests
+        - PR link #1 (repeat as necessary)
+      - Screenshots
+        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot #1 description explaining what you're trying to show
+    - [ ] (mm/dd/yyyy of completion) User’s score history will include pagination
+      - List of Evidence of Feature Completion
+      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Pull Requests
+        - PR link #1 (repeat as necessary)
+      - Screenshots
+        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot #1 description explaining what you're trying to show
+    - [ ] (mm/dd/yyyy of completion) Home page will have a weekly, monthly, and lifetime scoreboard
+      - List of Evidence of Feature Completion
+      - Status: Pending (Completed, Partially working, Incomplete, Pending)
+      - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+      - Pull Requests
+        - PR link #1 (repeat as necessary)
+      - Screenshots
+        - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+          - Screenshot #1 description explaining what you're trying to show
 ### Intructions
 #### Don't delete this
 1. Pick one project type

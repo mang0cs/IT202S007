@@ -1,7 +1,12 @@
 
-<!DOCTYPE html>
+
+
+
+
+
 
 <html>
+    
 
 <head>
     <style>
@@ -19,6 +24,7 @@
 </head>
 
     <body>
+        
     <!-- including the helpers file -->
 
     <!-- creating a canvas -->
@@ -29,7 +35,7 @@
 
     <script>
         // Arcade Shooter game
-
+        
         // creating the canvas described in the body
         var canvas = document.getElementById('canvas');
         // Get the canvas drawing context
@@ -99,7 +105,9 @@
 
         // Show the game menu and instructions
         function menu() {
+           
             erase();
+
             context.fillStyle = '#000000';
             context.font = '36px Arial';
             context.textAlign = 'center';
@@ -107,9 +115,12 @@
             context.font = '24px Arial';
             context.fillText('Click to Start', canvas.width / 2, canvas.height / 2);
             context.font = '18px Arial';
-            context.fillText('Up/Down to move, Space to shoot.', canvas.width / 2, (canvas.height / 4) * 3);
+            context.fillText('Up/Down to move, Space to shoot.', canvas.width / 2, (canvas.height / 4) * 2.5);
+            context.fillText('Scores will not be saved if you are not logged in!', canvas.width/2, canvas.height -10);
+
 // Start the game on a click
             canvas.addEventListener('click', startGame);
+            
         }
 
         // Start the game
@@ -276,8 +287,11 @@
         // Start the game
         menu();
         canvas.focus();
+        
 
     </script>
+    
+    
 
     </body>
 </html>
