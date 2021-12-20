@@ -219,7 +219,7 @@ function get10week(){
             
             $numlength = strlen(implode($results[$a-1]))/2; 
             $modifier = 10**$numlength;
-            $finalNum = implode($results[$a-1]) % $modifier;
+            $finalNum = (int)implode($results[$a-1]) % $modifier;
             
             $numlength = strlen(implode($results2[$a-1]))/2; 
             $modifier = 10**$numlength;
@@ -232,7 +232,7 @@ function get10week(){
             
             $numlength = strlen(implode($results4[$a-1]))/2; 
             $modifier = 10**$numlength;
-            $id = implode($results4[$a-1]) % $modifier;
+            $id = (int)implode($results4[$a-1]) % $modifier;
             $arr[$w]=$a;
             $w++;
             $arr[$w]=$finalNum;
@@ -315,7 +315,7 @@ function get10week(){
             
             $numlength = strlen(implode($results[$a-1]))/2; 
             $modifier = 10**$numlength;
-            $finalNum = implode($results[$a-1]) % $modifier;
+            $finalNum = (int)implode($results[$a-1]) % $modifier;
             
             $numlength = strlen(implode($results2[$a-1]))/2; 
             $modifier = 10**$numlength;
@@ -327,7 +327,7 @@ function get10week(){
             
             $numlength = strlen(implode($results4[$a-1]))/2; 
             $modifier = 10**$numlength;
-            $id = implode($results4[$a-1]) % $modifier;
+            $id = (int)implode($results4[$a-1]) % $modifier;
             $arr[$w]=$a;
             $w++;
             $arr[$w]=$finalNum;
@@ -402,7 +402,7 @@ function get10week(){
                 
                 $numlength = strlen(implode($results[$a-1]))/2; 
                 $modifier = 10**$numlength;
-                $finalNum = implode($results[$a-1]) % $modifier;
+                $finalNum = (int)implode($results[$a-1]) % $modifier;
                 
                 $numlength = strlen(implode($results2[$a-1]))/2; 
                 $modifier = 10**$numlength;
@@ -414,7 +414,7 @@ function get10week(){
                 
                 $numlength = strlen(implode($results4[$a-1]))/2; 
                 $modifier = 10**$numlength;
-                $id = implode($results4[$a-1]) % $modifier;
+                $id = (int)implode($results4[$a-1]) % $modifier;
                 $arr[$w]=$a;
                 $w++;
                 $arr[$w]=$finalNum;
