@@ -12,6 +12,11 @@ if (!is_logged_in()) {
     
 }
 	if (isset($_POST["sendscore"])) {
+		if(!is_logged_in()) {
+			flash("You are not logged in so the score was not saved");
+			
+		}
+		else{
 		$db = getDB();
         	if (isset($db)) {
 			$user_id = get_user_id();
@@ -66,11 +71,11 @@ if (!is_logged_in()) {
 			    }
 				
 			}
-			else {
-				flash("You are not logged in so the score was not saved");
-			}
+			
 		}
 	}
+	}
+	
 ?>
 
 
@@ -184,7 +189,7 @@ function startCooldown(){
 	
 <body>
 	<form method="POST">
-	<h3>Game starts when you click the button, You have 20 seconds to get a high score!</h3>
+	<h3>Click to start, 20 seconds to set a high score</h3>
 	<div id="timeLeft"></div>
 	<button onclick="clickCounter()" id="clicker" type="button"  name="clicker" style="width: 100%; height: 200px;" >Click Me!</button>
 	<div id="result"></div>

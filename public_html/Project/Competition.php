@@ -69,18 +69,18 @@ if (isset($_POST["join"])) {
 			$params = array( ":user_id" => $user_id, ":points_change" => $points_change, ":reason" => $reason);
 			$r = $stmt->execute($params);
             
-		    $stmt = $db->prepare("UPDATE Users set points = (SELECT IFNULL(SUM(points_change), 0) FROM PointsHistory p where p.user_id = :id) WHERE id = :id");
+		    $stmt = $db->prepare("UPDATE Users set Score = (SELECT IFNULL(SUM(points_change), 0) FROM PointsHistory p where p.user_id = :id) WHERE id = :id");
 		    $params = array(":id" => get_user_id());
 		    $r = $stmt->execute($params);
             
                 
-			    $stmt = $db->prepare("SELECT points from Users WHERE id = :id LIMIT 1");
+			    $stmt = $db->prepare("SELECT Score from Users WHERE id = :id LIMIT 1");
 			    $params = array(":id" => get_user_id());
 			    $r = $stmt->execute($params);
 			    if($r){
 				$result = $stmt->fetch(PDO::FETCH_ASSOC);
-				$profilePoints = $result["points"];
-				$_SESSION["user"]["points"] = $profilePoints;
+				$profilePoints = $result["Score"];
+				$_SESSION["user"]["Score"] = $profilePoints;
 			    }
 		
 			

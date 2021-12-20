@@ -5,6 +5,7 @@ if (!is_logged_in()) {
 }
 ?>
 <?php
+flash("Your balance is " . getBalance() . "!");
 $db = getDB();
 if (isset($_POST["makePub"])) {
     $stmt = $db->prepare("UPDATE Users set status = :status where id = :id");

@@ -55,8 +55,8 @@ function has_role($role)
     return false;
 }
 function getBalance() {
-    if (is_logged_in() && isset($_SESSION["user"]["points"])) {
-        return $_SESSION["user"]["points"];
+    if (is_logged_in() && isset($_SESSION["user"]["Score"])) {
+        return $_SESSION["user"]["Score"];
     }
     return 0;
 }
@@ -127,6 +127,7 @@ function safer_echo($var) {
     }
     echo htmlspecialchars($var, ENT_QUOTES, "UTF-8");
 }
+
 function get_url($dest)
 {
     global $BASE_PATH;
@@ -245,15 +246,11 @@ function get10week(){
             if(get_username() == $user){
                
                 echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
-            }else{
-                $id=  get_user_id();
-                
-                
-                
-                
-                
-                
+            }
+            else{
+                $id = implode($results4[$a-1]);            
                 echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                
             }
           $a++;
           $i++;
@@ -344,7 +341,7 @@ function get10week(){
                
                 echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
             }else{
-                $id=  get_user_id();
+                $id = implode($results4[$a-1]);
                 
                 
                 
@@ -430,14 +427,9 @@ function get10week(){
                 if(get_username() == $user){
                    
                     echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                    
                 }else{
-                    $id=  get_user_id();
-                    
-                    
-                    
-                    
-                    
-                    
+                    $id = implode($results4[$a-1]);
                     echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
                 }
               $a++;

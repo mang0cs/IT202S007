@@ -57,7 +57,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php endforeach; ?>
             <?php else: ?>
                 <div class="list-group-item">
-                    No scores to show, sorry.
+                    No scores to show.
                 </div>
             <?php endif; ?>
         </div>

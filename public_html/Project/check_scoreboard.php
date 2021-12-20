@@ -6,7 +6,7 @@
 if(isset($_GET["id"])){
 $id = $_GET["id"];
 }
-flash("comp id is " . $id);
+// flash("comp id is " . $id);
 ?>
 
 

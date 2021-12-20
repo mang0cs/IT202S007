@@ -8,11 +8,6 @@
 
 if(isset($_GET["id"])){
 $id = $_GET["id"];
-
-}
-else{
-$id= get_user_id();
-
 }
 
 
@@ -59,6 +54,9 @@ $stmt = $db->prepare("SELECT * from Scores where user_id = :id order by id desc 
 $params = array(":id" => $id);
 $results = $stmt->execute($params);
 $results = $stmt->fetchAll();
+
+
+
 
 
 
