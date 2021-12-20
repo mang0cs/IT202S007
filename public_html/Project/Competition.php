@@ -73,6 +73,7 @@ else {
     <div>2 nd place: <?php safer_echo($r["second_place_per"]); ?></div>
     <div>3 rd place: <?php safer_echo($r["third_place_per"]); ?></div>
     <div>expires: <?php safer_echo($r["expires"]); ?></div>
+    <div>Scoreboard: <?php $compID=$r["id"]; ?><a href="check_scoreboard.php?id=<?php echo $compID;?>"><?php echo "Click here to see the Scoreboard";?></a></div>
 
 <?php if ($r["reg"] != get_user_id()): ?>
 <form method="POST">
