@@ -149,37 +149,6 @@
       - Screenshots
         - ![image](https://user-images.githubusercontent.com/89930158/144321383-324b2823-d19f-4b82-a5d5-77df2381b8f2.png)
           - Code snippet showing functions to display top scores
-          
-- Milestone 3
-- [ ] (mm/dd/yyyy of completion) Users will have points associated with their account
-      - List of Evidence of Feature Completion
-      - Status: Completed
-      - Direct Link: https://ucid-prod.heroukuapp.com/project/profile.php
-      - Pull Requests
-        - https://github.com/mang0cs/IT202S007/pull/63
-      - Screenshots
-        - ![image](https://user-images.githubusercontent.com/89930158/144321837-8ad2598e-285a-4491-94ff-d3a295f4dc77.png)
-          - Code snippet to show scores being saved to table at the end of the game
-  - [x] (12/1/2021) The user will be able to see their last 10 scores
-      - List of Evidence of Feature Completion
-      - Status: Completed
-      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
-      - Pull Requests
-        - https://github.com/mang0cs/IT202S007/pull/63
-      - Screenshots
-        - ![image](https://user-images.githubusercontent.com/89930158/144321537-2ae4dfc1-a8b9-4496-bdbe-0a90c4d02e35.png)
-          - Code snippet showing code history
-        - ![image](https://user-images.githubusercontent.com/89930158/144321670-de2257a9-983f-42b0-82c7-fcd42fa20cf7.png)
-          - No scores, therefore no results
-  - [x] (12/1/2021) Create functions that output the following scoreboards
-      - List of Evidence of Feature Completion
-      - Status: Completed
-      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
-      - Pull Requests
-        - https://github.com/mang0cs/IT202S007/pull/64
-      - Screenshots
-        - ![image](https://user-images.githubusercontent.com/89930158/144321383-324b2823-d19f-4b82-a5d5-77df2381b8f2.png)
-          - Code snippet showing functions to display top scores
 
 
 - Milestone 3
@@ -269,6 +238,105 @@
         - ![image](https://user-images.githubusercontent.com/89930158/145303369-4a78c0ca-a4f8-4e79-b990-2e1f87184370.png)
           - Code snippet for the function that calculates the competition winners
 - Milestone 4
+  - [x] (12/19/2021) User can set their profile to be public or private (will need another column in Users table)
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/94
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/146838143-a7d21021-5eaf-48bd-bf77-cef548ddb4a5.png)
+          - Buttons on profile page that allow the user to have their profile public or private
+        - ![image](https://user-images.githubusercontent.com/89930158/146838287-aaa67b16-a48f-4305-b9b2-3c03e82bf5f5.png)
+          - Code snippet for setting profile to private or public
+  - [x] (12/19/2021) User will be able to see their competition history
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/competitionhistory.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/95
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/146838385-7e28c95e-87a7-4e7e-9320-631f43a8bebc.png)
+          - Competition history page via profile that shows competition history with details, also has pagination
+        - ![image](https://user-images.githubusercontent.com/89930158/146838497-1c5a545e-65b4-4c3d-878d-7d3bf3e9869b.png)
+          - Competition history option located at bottom
+  - [x] (12/20/2021) User with the role of “admin” can edit a competition where paid_out = false
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/admin/edit_competitions.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/103
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/146838648-c0aa5fd1-60aa-4b46-89a1-dbc225b0ee34.png)
+          - All competitions with details, can be edited to the admin's liking. Also on the nav bar it shows how an admin can access this page.
+        - ![image](https://user-images.githubusercontent.com/89930158/146838770-40c5036f-6464-407b-b01b-f92ede228fc9.png)
+          - Menu for updating a competition, can edit all form values
+        - ![image](https://user-images.githubusercontent.com/89930158/146839164-1c574d3b-e57f-4939-91b6-ed6ecc789b4e.png)
+          - The first competition "smile" will be edited to these values
+        - ![image](https://user-images.githubusercontent.com/89930158/146839214-d2495490-ea6e-4ffe-b3af-bcfb6a284ccb.png)
+          - Competition was edited
+  - [x] (12/19/2021) Add pagination to the Active Competitions view
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/Competition.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/97
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/146839371-daee210a-e75f-4d03-a6df-b585ebf7664d.png)
+          - Active competitions view with pagination
+  - [x] (12/20/2021) Anywhere a username is displayed should be a link to that user’s profile
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/home.php
+      - Pull Requests
+        - PR link #1 (repeat as necessary)
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/146839508-15aa6d0a-6d68-4135-98af-7f898afe5821.png)
+          - Home page has profile links that direct to user's profile, if it's your profile it redirects to your own profile.
+        - ![image](https://user-images.githubusercontent.com/89930158/146839630-b3ff9929-6f9f-4132-8ded-49b9a41547d8.png)
+          - The redirection to their profile with previous scores and points
+        - ![image](https://user-images.githubusercontent.com/89930158/146839770-7e338c40-4cad-4406-afc7-09e98712176c.png)
+          - test1234 was set to private, so the redirection was to the home page with a warning that tells the user that the other user's profile was private
+   - [x] (12/19/2021) Viewing an active or expired competition should show the top 10 scoreboard related to that competition
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/Competition.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/101
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/146839897-eda9128a-dccc-4e43-9c6a-7ece78a3df03.png)
+          - An option to view the scoreboard when viewing competitions
+        - ![image](https://user-images.githubusercontent.com/89930158/146839954-5786fdd3-99ff-4eb2-95ba-8a1b0151ca62.png)
+          - The page for the top 10 scores of a particular competition
+   - [x] (12/19/2021) Game should be fully implemented/complete by this point
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/game.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/96
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/146840205-3daf8846-84bb-46fe-94de-eb85f36769c9.png)
+          - Game tells you if you are not logged in that your score will not be saved
+        - ![image](https://user-images.githubusercontent.com/89930158/146840292-3a47c069-cfe1-42fa-b02d-bac84d713bd0.png)
+          - If you submit your score while not logged in you will get another notice telling you that your score was not saved
+   - [x] (12/19/2021) User’s score history will include pagination
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/scorehistory.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/98
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/146840433-3d02d1e9-8493-4ad5-8ecb-76b06e3f371d.png)
+          - Score history now has pagination
+    - [x] (12/19/2021) Home page will have a weekly, monthly, and lifetime scoreboard
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/home.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/100
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/146840686-ff41f0d6-fabd-4d65-b656-0b733acfc3ee.png)
+          - Scoreboards on the home page with links to the user's profiles
 ### Intructions
 #### Don't delete this
 1. Pick one project type
