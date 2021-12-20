@@ -178,6 +178,7 @@ function get_status() {
 }
 }
 function get10week(){
+    error_reporting(0);
     $arr = [];
     $db = getDB();
     $stmt = $db->prepare("SELECT score from Scores where created >= :timeCon order by score desc limit 10");
@@ -219,7 +220,7 @@ function get10week(){
             
             $numlength = strlen(implode($results[$a-1]))/2; 
             $modifier = 10**$numlength;
-            $finalNum = implode($results[$a-1]) % $modifier;
+            $finalNum = (int)implode($results[$a-1]) % $modifier;
             
             $numlength = strlen(implode($results2[$a-1]))/2; 
             $modifier = 10**$numlength;
@@ -232,7 +233,7 @@ function get10week(){
             
             $numlength = strlen(implode($results4[$a-1]))/2; 
             $modifier = 10**$numlength;
-            $id = implode($results4[$a-1]) % $modifier;
+            $id = (int)implode($results4[$a-1]) % $modifier;
             $arr[$w]=$a;
             $w++;
             $arr[$w]=$finalNum;
@@ -245,11 +246,11 @@ function get10week(){
             
             if(get_username() == $user){
                
-                echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
             }
             else{
                 $id = implode($results4[$a-1]);            
-                echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
                 
             }
           $a++;
@@ -315,7 +316,7 @@ function get10week(){
             
             $numlength = strlen(implode($results[$a-1]))/2; 
             $modifier = 10**$numlength;
-            $finalNum = implode($results[$a-1]) % $modifier;
+            $finalNum = (int)implode($results[$a-1]) % $modifier;
             
             $numlength = strlen(implode($results2[$a-1]))/2; 
             $modifier = 10**$numlength;
@@ -327,7 +328,7 @@ function get10week(){
             
             $numlength = strlen(implode($results4[$a-1]))/2; 
             $modifier = 10**$numlength;
-            $id = implode($results4[$a-1]) % $modifier;
+            $id = (int)implode($results4[$a-1]) % $modifier;
             $arr[$w]=$a;
             $w++;
             $arr[$w]=$finalNum;
@@ -339,7 +340,7 @@ function get10week(){
             
             if(get_username() == $user){
                
-                echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
             }else{
                 $id = implode($results4[$a-1]);
                 
@@ -348,7 +349,7 @@ function get10week(){
                 
                 
                 
-                echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
             }
           $a++;
           $i++;
@@ -402,7 +403,7 @@ function get10week(){
                 
                 $numlength = strlen(implode($results[$a-1]))/2; 
                 $modifier = 10**$numlength;
-                $finalNum = implode($results[$a-1]) % $modifier;
+                $finalNum = (int)implode($results[$a-1]) % $modifier;
                 
                 $numlength = strlen(implode($results2[$a-1]))/2; 
                 $modifier = 10**$numlength;
@@ -414,7 +415,7 @@ function get10week(){
                 
                 $numlength = strlen(implode($results4[$a-1]))/2; 
                 $modifier = 10**$numlength;
-                $id = implode($results4[$a-1]) % $modifier;
+                $id = (int)implode($results4[$a-1]) % $modifier;
                 $arr[$w]=$a;
                 $w++;
                 $arr[$w]=$finalNum;
@@ -426,11 +427,11 @@ function get10week(){
                 
                 if(get_username() == $user){
                    
-                    echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                    echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
                     
                 }else{
                     $id = implode($results4[$a-1]);
-                    echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                    echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
                 }
               $a++;
               $i++;
