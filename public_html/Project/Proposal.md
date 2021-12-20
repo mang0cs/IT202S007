@@ -149,6 +149,37 @@
       - Screenshots
         - ![image](https://user-images.githubusercontent.com/89930158/144321383-324b2823-d19f-4b82-a5d5-77df2381b8f2.png)
           - Code snippet showing functions to display top scores
+          
+- Milestone 3
+- [ ] (mm/dd/yyyy of completion) Users will have points associated with their account
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.heroukuapp.com/project/profile.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/63
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/144321837-8ad2598e-285a-4491-94ff-d3a295f4dc77.png)
+          - Code snippet to show scores being saved to table at the end of the game
+  - [x] (12/1/2021) The user will be able to see their last 10 scores
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/63
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/144321537-2ae4dfc1-a8b9-4496-bdbe-0a90c4d02e35.png)
+          - Code snippet showing code history
+        - ![image](https://user-images.githubusercontent.com/89930158/144321670-de2257a9-983f-42b0-82c7-fcd42fa20cf7.png)
+          - No scores, therefore no results
+  - [x] (12/1/2021) Create functions that output the following scoreboards
+      - List of Evidence of Feature Completion
+      - Status: Completed
+      - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
+      - Pull Requests
+        - https://github.com/mang0cs/IT202S007/pull/64
+      - Screenshots
+        - ![image](https://user-images.githubusercontent.com/89930158/144321383-324b2823-d19f-4b82-a5d5-77df2381b8f2.png)
+          - Code snippet showing functions to display top scores
 
 
 - Milestone 3

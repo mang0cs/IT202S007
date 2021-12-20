@@ -2,7 +2,7 @@
 
 <?php
 if (!is_logged_in()) {
-    
+    //this will redirect to login and kill the rest of this script (prevent it from executing)
     flash("You don't have permission to access this page");
     die(header("Location: login.php"));
 }
@@ -15,38 +15,34 @@ $db = getDB();
 
 $per_page = 10;
 $theID = get_user_id();
-
-$query = "SELECT count(*) as total FROM Scores WHERE user_id = $theID ORDER BY created DESC";
+$query = "SELECT count(*) as total FROM CompetitionParticipants WHERE user_id = $theID ORDER BY created DESC";
 paginate($query, [], $per_page);
-
-
-
-$stmt = $db->prepare("SELECT * FROM Scores WHERE user_id = :id ORDER BY created DESC LIMIT :offset,:count");
+$stmt = $db->prepare("SELECT u.*,c.name FROM CompetitionParticipants u LEFT JOIN Competitions c ON c.id=u.competition_id WHERE u.user_id = :id ORDER BY u.created DESC LIMIT :offset,:count");
 $stmt->bindValue(":offset", $offset, PDO::PARAM_INT);
 $stmt->bindValue(":count", $per_page, PDO::PARAM_INT);
 $stmt->bindValue(":id", get_user_id(), PDO::PARAM_INT);
 $stmt->execute();
-
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
 <div class="container-fluid">
-        <h3>Your Score History</h3>
+        <h3>Your Competition History</h3>
         <div class="list-group">
             <?php if (isset($results) && count($results)): ?>
                 <?php foreach ($results as $r): ?>
-                    <div class="list-group-item" style="background-color: #25E418">
+                    <div class="list-group-item" style="background-color: #13C7BB">
                         <div class="row">
 				
                             <div class="col">
-                                You scored: 
-                                <?php safer_echo($r["score"]); ?>
+                                You joined: 
+                                <?php safer_echo($r["name"]); ?>
                             </div>
                             <div class="col">
-                                Scored on: 
+                                You joined this competition on: 
                                 <?php safer_echo($r["created"]); ?>
                             </div>
+			    
 			    <div class="col">
                                 <form method="POST">
 				</form>
@@ -57,7 +53,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php endforeach; ?>
             <?php else: ?>
                 <div class="list-group-item">
-                    No scores to show.
+                    No competitions to show, sorry.
                 </div>
             <?php endif; ?>
         </div>

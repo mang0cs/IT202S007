@@ -5,6 +5,35 @@ if (!is_logged_in()) {
 }
 ?>
 <?php
+flash("Your balance is " . getBalance() . "!");
+$db = getDB();
+if (isset($_POST["makePub"])) {
+    $stmt = $db->prepare("UPDATE Users set status = :status where id = :id");
+        $r = $stmt->execute([":status" => "public", ":id" => get_user_id()]);
+        if ($r) {
+            flash("Your profile is public");
+        }
+        else {
+            flash("Error updating profile");
+        }
+}
+
+if (isset($_POST["makePriv"])) {
+    $stmt = $db->prepare("UPDATE Users set status = :status where id = :id");
+        $r = $stmt->execute([":status" => "private", ":id" => get_user_id()]);
+        if ($r) {
+            flash("Your profile is private");
+        }
+        else {
+            flash("Error updating profile");
+        }
+}
+if(isset($_GET["id"])){
+    $id = $_GET["id"];
+    }
+    else{
+    $id= get_user_id();
+    }
 if (isset($_POST["save"])) {
     $email = se($_POST, "email", null, false);
     $username = se($_POST, "username", null, false);
@@ -80,6 +109,11 @@ if (isset($_POST["save"])) {
         }
     }
 }
+
+$stmt = $db->prepare("SELECT * from Scores where user_id = :id order by id desc limit 10");
+$params = array(":id" => get_user_id());
+$results = $stmt->execute($params);
+$results = $stmt->fetchAll();
 ?>
 
 <?php
@@ -147,6 +181,7 @@ $username = get_username();
     }
     
 </script>
+
 <br>
 <form action="topScores.php" method ="get">
     <label for="score">Choose the top score: </label>
@@ -164,12 +199,25 @@ $username = get_username();
     </form>
 
     <form action ="mycompetition.php" method ="POST">
-        <input type = "submit" value = "My competition">
+        <input type = "submit" value = "My Competition">
     </form>
 
     <form action ="Competition.php" method ="POST">
-        <input type = "submit" value = "Running Competition">
+        <input type = "submit" value = "Active Competitions">
     </form>
+
+    <form action ="competitionhistory.php" method ="POST">
+        <input type = "submit" value = "Competition History">
+    </form>
+        <form method="POST">
+            <table style="width:100%">
+            <div id="currStatus"></div>
+            <tr>
+        <td>  <input class="btn btn-primary" type="submit" name="makePub" value="Set your profile to Public"/>  </td>
+        <td>  <input class="btn btn-primary" type="submit" name="makePriv" value="Set your profile to Private"/>  </td>
+            </tr>
+            </table>
+        </form>
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>

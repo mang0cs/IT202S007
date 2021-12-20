@@ -18,7 +18,7 @@ if (isset($_POST["join"])) {
         if ($result) {
             $fee = (int)$result["fee"];
             if ($score >= $fee) {
-                $stmt = $db->prepare("INSERT INTO UserCompetitions (competition_id, user_id) VALUES(:cid, :uid)");
+                $stmt = $db->prepare("INSERT INTO CompetitionParticipants(competition_id, user_id) VALUES(:cid, :uid)");
                 $r = $stmt->execute([":cid" => $_POST["cid"], ":uid" => get_user_id()]);
                 if ($r) {
                     flash("Successfully join competition", "success");
