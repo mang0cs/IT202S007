@@ -54,10 +54,15 @@ function has_role($role)
     }
     return false;
 }
-function get_username()
-{
-    if (is_logged_in()) { 
-        return se($_SESSION["user"], "username", "", false);
+function getBalance() {
+    if (is_logged_in() && isset($_SESSION["user"]["points"])) {
+        return $_SESSION["user"]["points"];
+    }
+    return 0;
+}
+function get_username() {
+    if (is_logged_in() && isset($_SESSION["user"]["username"])) {
+        return $_SESSION["user"]["username"];
     }
     return "";
 }
@@ -217,7 +222,7 @@ function get10week(){
             
             $numlength = strlen(implode($results2[$a-1]))/2; 
             $modifier = 10**$numlength;
-            $user = substr(implode($results2[$a-1]),0,$numlength);
+            $user = implode($results2[$a-1]);
     
     
             $numlength = strlen(implode($results3[$a-1]))/2; 
@@ -317,7 +322,7 @@ function get10week(){
             
             $numlength = strlen(implode($results2[$a-1]))/2; 
             $modifier = 10**$numlength;
-            $user = substr(implode($results2[$a-1]),0,$numlength);
+            $user = implode($results2[$a-1]);
             
             $numlength = strlen(implode($results3[$a-1]))/2; 
             $modifier = 10**$numlength;
@@ -404,27 +409,27 @@ function get10week(){
                 
                 $numlength = strlen(implode($results2[$a-1]))/2; 
                 $modifier = 10**$numlength;
-                $userbro = substr(implode($results2[$a-1]),0,$numlength);
+                $user = implode($results2[$a-1]);
                 
                 $numlength = strlen(implode($results3[$a-1]))/2; 
                 $modifier = 10**$numlength;
-                $pointsbro = implode($results3[$a-1]) % $modifier;
+                $points = implode($results3[$a-1]) % $modifier;
                 
                 $numlength = strlen(implode($results4[$a-1]))/2; 
                 $modifier = 10**$numlength;
-                $idbro = implode($results4[$a-1]) % $modifier;
+                $id = implode($results4[$a-1]) % $modifier;
                 $arr[$w]=$a;
                 $w++;
                 $arr[$w]=$finalNum;
                 $w++;
-                $arr[$w]=$userbro;
+                $arr[$w]=$user;
                 $w++;
-                $arr[$w]=$pointsbro;
+                $arr[$w]=$points;
                 $w++;
                 
-                if(get_username() == $userbro){
+                if(get_username() == $user){
                    
-                    echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='profile.php?id=$idbro'>$userbro</a> who has " . $pointsbro . " profile points" . "</br>";
+                    echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
                 }else{
                     $id=  get_user_id();
                     
@@ -433,7 +438,7 @@ function get10week(){
                     
                     
                     
-                    echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='other_profile.php?id=$idbro'>$userbro</a> who has " . $pointsbro . " profile points" . "</br>";
+                    echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
                 }
               $a++;
               $i++;

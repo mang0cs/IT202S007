@@ -109,7 +109,10 @@ if (isset($_POST["save"])) {
     }
 }
 
-
+$stmt = $db->prepare("SELECT * from Scores where user_id = :id order by id desc limit 10");
+$params = array(":id" => get_user_id());
+$results = $stmt->execute($params);
+$results = $stmt->fetchAll();
 ?>
 
 <?php

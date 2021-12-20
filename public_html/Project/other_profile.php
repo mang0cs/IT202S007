@@ -4,11 +4,15 @@
 
 
 
+
+
 if(isset($_GET["id"])){
 $id = $_GET["id"];
+
 }
 else{
 $id= get_user_id();
+
 }
 
 
@@ -23,18 +27,21 @@ $stmt = $db->prepare("SELECT status from Users WHERE id = :id LIMIT 1");
 	if($result["status"]=="private"){
 	flash("You cannot see the profiles of private accounts.");
 	die(header("Location: home.php"));
-
+		
 		
 	}
+        
+
     }
 
 
-    $stmt = $db->prepare("SELECT points from Users WHERE id = :id LIMIT 1");
+
+    $stmt = $db->prepare("SELECT Score from Users WHERE id = :id LIMIT 1");
     $params = array(":id" => $id);
     $r = $stmt->execute($params);
     if($r){
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        $profilePoints = $result["points"];
+        $profilePoints = $result["Score"];
 flash("This account has " . $profilePoints . " points.");
     }
 
@@ -47,10 +54,13 @@ flash("This account has " . $profilePoints . " points.");
 <?php
 
 
+
 $stmt = $db->prepare("SELECT * from Scores where user_id = :id order by id desc limit 10");
 $params = array(":id" => $id);
 $results = $stmt->execute($params);
 $results = $stmt->fetchAll();
+
+
 
 
 ?>
@@ -59,7 +69,8 @@ $results = $stmt->fetchAll();
 <html>
     
     <script>
-         
+        
+        
     </script>
     
     
@@ -98,6 +109,5 @@ $results = $stmt->fetchAll();
             <?php endif; ?>
         </div>
     </div>
-
 
 <?php require(__DIR__ . "/../../partials/flash.php");?>

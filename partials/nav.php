@@ -33,6 +33,7 @@ require_once(__DIR__ . "/../lib/functions.php");
     <ul>
         
         <?php if (!is_logged_in()) : ?>
+            <li><a href="<?php echo get_url('home.php'); ?>">Home</a></li>
             <li><a href="<?php echo get_url('login.php'); ?>">Login</a></li>
             <li><a href="<?php echo get_url('register.php'); ?>">Register</a></li>
             <li><a href = "proj.html">Play!</a></li>
@@ -41,9 +42,11 @@ require_once(__DIR__ . "/../lib/functions.php");
             <li><a href="<?php echo get_url('admin/create_role.php'); ?>">Create Role</a></li>
             <li><a href="<?php echo get_url('admin/list_roles.php'); ?>">List Roles</a></li>
             <li><a href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign Roles</a></li>
+            <li><a href="<?php echo get_url('admin/create_scores.php'); ?>">Create Scores</a></li>
         <?php endif; ?>
         <?php if (is_logged_in()) : ?>
-            <li><a href = "proj.html">Play!</a></li>
+            <li><a href = "home.php">Home</a></li>
+            <li><a href = "savescore.php">Play!</a></li>
             <li><a href="profile.php">Profile</a></li>
             <li><a href="logout.php">Logout</a></li>
         <?php endif; ?>
