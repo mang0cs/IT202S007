@@ -242,11 +242,13 @@
       - Direct Link: https://ucid-prod.herokuapp.com/Project/profile.php
       - Pull Requests
         - https://github.com/mang0cs/IT202S007/pull/94
-      - Screenshots
+      - Screenshots         
         - ![image](https://user-images.githubusercontent.com/89930158/146838143-a7d21021-5eaf-48bd-bf77-cef548ddb4a5.png)
           - Buttons on profile page that allow the user to have their profile public or private
         - ![image](https://user-images.githubusercontent.com/89930158/146838287-aaa67b16-a48f-4305-b9b2-3c03e82bf5f5.png)
           - Code snippet for setting profile to private or public
+        - ![image](https://user-images.githubusercontent.com/89930158/146841177-e702f76e-c15a-4916-aa24-d62c08a27876.png)
+          - Database for public/private profiles
   - [x] (12/19/2021) User will be able to see their competition history
       - List of Evidence of Feature Completion
       - Status: Completed
