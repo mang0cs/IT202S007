@@ -245,11 +245,11 @@ function get10week(){
             
             if(get_username() == $user){
                
-                echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
             }
             else{
                 $id = implode($results4[$a-1]);            
-                echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
                 
             }
           $a++;
@@ -339,7 +339,7 @@ function get10week(){
             
             if(get_username() == $user){
                
-                echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
             }else{
                 $id = implode($results4[$a-1]);
                 
@@ -348,7 +348,7 @@ function get10week(){
                 
                 
                 
-                echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
             }
           $a++;
           $i++;
@@ -426,11 +426,11 @@ function get10week(){
                 
                 if(get_username() == $user){
                    
-                    echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                    echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
                     
                 }else{
                     $id = implode($results4[$a-1]);
-                    echo "The #" . $a . " top score is " . $finalNum . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
+                    echo "The #" . $a . " top score is " . round($finalNum) . " scored by user <a href='other_profile.php?id=$id'>$user</a> who has " . $points . " profile points" . "</br>";
                 }
               $a++;
               $i++;
