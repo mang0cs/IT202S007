@@ -4,6 +4,7 @@
 $query = $_GET["score"];
 $result = [];
 if($query == "Top weekly") {
+    error_reporting(0);
     get10week();
     }
 
