@@ -275,6 +275,7 @@ function get10week(){
     
     
     function get10month(){
+        error_reporting(0);
     $arr = [];
     $db = getDB();
     $stmt = $db->prepare("SELECT score from Scores where created >= :timeCon order by score desc limit 10");
@@ -363,6 +364,7 @@ function get10week(){
             endforeach;
     }
     function get10lifetime(){
+        error_reporting(0);
         $arr = [];
         $db = getDB();
         $stmt = $db->prepare("SELECT score from Scores where created >= :timeCon order by score desc limit 10");
