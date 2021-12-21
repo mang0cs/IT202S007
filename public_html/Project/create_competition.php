@@ -40,7 +40,7 @@ if (isset($_POST["name"])) {
             ":fee" => $_POST["fee"],
             ":reward" => $_POST["reward"]
         ];
-        flash(get_user_id());
+        //flash(get_user_id());
         switch ((int)$_POST["split"]) {
             // case 0:
               //   break;  using default for this
