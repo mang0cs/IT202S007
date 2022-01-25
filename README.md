@@ -1,6 +1,9 @@
 # Project Name: Simple Arcade
 ## Project Summary: This project is a simple arcade with scoreboards, user registration and competitions based on the implemented HTML5 Canvas game.
-## Website Link: https://ucid-prod.herokuapp.com/Project/login.php
+## [Live Website](https://ucid-prod.herokuapp.com/Project/login.php)
+## [Project Board](https://github.com/mang0cs/IT202S007/projects/1)
+## [Screenshots to these features can be found here](https://github.com/mang0cs/IT202S007/blob/prod/public_html/Project/Proposal.md)
+## [Video detailing all of the features with a voiceover](https://www.youtube.com/watch?v=ROsiqy1gz2o)
 ### Users must register an account in order to access the Simple Arcade. Registered users can play the game, save their score, view their profile and more.
 
 ### List of Features
@@ -22,5 +25,4 @@
   - Anywhere a username is displayed should be a link to that user’s profile
   - Home page has top weekly, monthly and lifetime scoreboards
   
-[Screenshots to these features can be found here](https://github.com/mang0cs/IT202S007/blob/prod/public_html/Project/Proposal.md) <br>
-[Video detailing all of the features with a voiceover](https://www.youtube.com/watch?v=ROsiqy1gz2o)
+
