@@ -22,5 +22,5 @@
   - Anywhere a username is displayed should be a link to that user’s profile
   - Home page has top weekly, monthly and lifetime scoreboards
   
-[Screenshots to these features can be found here](https://github.com/mang0cs/IT202S007/blob/prod/public_html/Project/Proposal.md)
+[Screenshots to these features can be found here](https://github.com/mang0cs/IT202S007/blob/prod/public_html/Project/Proposal.md) <br>
 [Video detailing all of the features with a voiceover](https://www.youtube.com/watch?v=ROsiqy1gz2o)
